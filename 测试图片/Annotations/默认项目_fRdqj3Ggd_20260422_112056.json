@@ -1,0 +1,89 @@
+{
+  "info": {
+    "description": "SAM2 Annotation Tool Export - \u9ed8\u8ba4\u9879\u76ee",
+    "url": "",
+    "version": "1.0.0",
+    "year": 2026,
+    "contributor": "",
+    "date_created": "2026-04-22 11:20:56"
+  },
+  "licenses": [],
+  "categories": [
+    {
+      "id": 0,
+      "name": "object",
+      "supercategory": ""
+    },
+    {
+      "id": 1,
+      "name": "person",
+      "supercategory": ""
+    },
+    {
+      "id": 2,
+      "name": "car",
+      "supercategory": ""
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "fRdqj3Ggd.jpeg",
+      "width": 2500,
+      "height": 1668,
+      "coco_url": "",
+      "flickr_url": "",
+      "date_captured": "2026-04-22T11:20:44.779748"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 0,
+      "segmentation": [
+        [
+          625.0,
+          348.0,
+          639.0,
+          514.0,
+          404.0,
+          977.0,
+          433.0,
+          1315.0,
+          827.0,
+          1397.0,
+          1782.0,
+          1343.0,
+          1844.0,
+          1138.0,
+          1596.0,
+          1032.0,
+          1440.0,
+          766.0,
+          1217.0,
+          652.0,
+          1130.0,
+          526.0,
+          1130.0,
+          332.0,
+          870.0,
+          426.0
+        ]
+      ],
+      "area": 983438,
+      "bbox": [
+        379,
+        331,
+        1470,
+        1066
+      ],
+      "iscrowd": 0,
+      "attributes": {
+        "confidence": 0.9775150418281555,
+        "is_manual": false,
+        "label": ""
+      }
+    }
+  ]
+}

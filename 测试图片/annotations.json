@@ -1,0 +1,60 @@
+{
+  "info": {
+    "description": "SAM2 Annotation Tool Export - \u9ed8\u8ba4\u9879\u76ee",
+    "url": "",
+    "version": "1.0.0",
+    "year": 2026,
+    "contributor": "",
+    "date_created": "2026-04-22 10:58:40"
+  },
+  "licenses": [],
+  "categories": [
+    {
+      "id": 0,
+      "name": "object",
+      "supercategory": ""
+    },
+    {
+      "id": 1,
+      "name": "person",
+      "supercategory": ""
+    },
+    {
+      "id": 2,
+      "name": "car",
+      "supercategory": ""
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "840310e8073e0319823c9efa45363d93.png",
+      "width": 1080,
+      "height": 1410,
+      "coco_url": "",
+      "flickr_url": "",
+      "date_captured": "2026-04-22T10:58:16.984244"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 0,
+      "segmentation": [],
+      "area": 106860,
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "iscrowd": 0,
+      "attributes": {
+        "confidence": 0.0,
+        "is_manual": false,
+        "label": "\u957f\u9888\u9e7f"
+      }
+    }
+  ]
+}
