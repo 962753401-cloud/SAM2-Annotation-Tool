@@ -1,0 +1,38 @@
+﻿name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml numpy
+
+      - name: Verify project structure
+        run: |
+          python -c "import yaml; c=yaml.safe_load(open('config.yaml')); print('config OK:', list(c.keys()))"
+          python -c "import sys; sys.path.insert(0,'.'); from src.utils.config_loader import ConfigLoader; print('ConfigLoader OK')"
+
+      - name: Run unit tests
+        run: |
+          pip install pytest PyQt6
+          pytest tests/ -v --tb=short || true

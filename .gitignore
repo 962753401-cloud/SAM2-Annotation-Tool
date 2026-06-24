@@ -1,0 +1,43 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project temp files
+*.tmp
+*.log
+annotations/
+
+# Model weights (large files, do not commit)
+*.pt
+*.pth
+*.ckpt
+
+# Claude / Codex
+.claude/
+.codex/

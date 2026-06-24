@@ -1,0 +1,91 @@
+﻿# SAM2 Annotation Tool Configuration
+
+# Model settings
+model:
+  path: "models/sam2_hiera_tiny.pt"
+  config_path: "models/sam2_hiera_t.yaml"
+  device: "cuda"  # "cuda" for GPU, "cpu" for CPU-only
+
+# Polygon settings
+polygon:
+  # Polygon vertex density configuration
+  epsilon_factor: 0.005  # Options: 0.01 (low ~13 vertices), 0.005 (medium ~25-50), 0.002 (high ~50-100)
+  max_vertices: 100      # Maximum vertex count limit
+
+# Quality settings
+quality:
+  # Quality assessment configuration
+  enable_metrics: true   # Enable quality metrics
+  min_vertex_density: 5  # Minimum vertex density (vertices per 100px perimeter)
+
+# Feature switches
+features:
+  high_density_polygon: true   # false uses legacy epsilon=0.01
+  quality_metrics: true        # false disables quality metrics
+  class_hierarchy: false       # false uses legacy flat class list
+
+# UI settings
+ui:
+  theme: "dark"
+  canvas_background: "#2a2a2a"
+  mask_opacity: 0.5
+  mask_color_positive: "#00ff00"
+  mask_color_negative: "#ff0000"
+  polygon_line_width: 2
+  point_size: 8
+
+# Default annotation classes
+classes:
+  - name: "object"
+    id: 0
+    color: "#00ff00"
+    supercategory: "general"
+  - name: "person"
+    id: 1
+    color: "#ff0000"
+    supercategory: "living"
+  - name: "car"
+    id: 2
+    color: "#0000ff"
+    supercategory: "vehicle"
+  - name: "truck"
+    id: 3
+    color: "#ff00ff"
+    supercategory: "vehicle"
+  - name: "bus"
+    id: 4
+    color: "#ffff00"
+    supercategory: "vehicle"
+  - name: "cat"
+    id: 5
+    color: "#ff9900"
+    supercategory: "animal"
+  - name: "dog"
+    id: 6
+    color: "#99ff00"
+    supercategory: "animal"
+  - name: "bird"
+    id: 7
+    color: "#00ffff"
+    supercategory: "animal"
+  - name: "tree"
+    id: 8
+    color: "#006600"
+    supercategory: "nature"
+  - name: "flower"
+    id: 9
+    color: "#ff66ff"
+    supercategory: "nature"
+  - name: "building"
+    id: 10
+    color: "#666666"
+    supercategory: "structure"
+  - name: "house"
+    id: 11
+    color: "#996666"
+    supercategory: "structure"
+
+# Export settings
+export:
+  default_format: "coco"
+  output_dir: "./annotations"
